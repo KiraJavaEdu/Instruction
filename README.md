@@ -5,11 +5,16 @@
 如果你在实验过程中遇到了困难, 并打算向我们寻求帮助, 请先阅读提问的智慧这篇文章.
 如果你发现了实验讲义和材料的错误或者对实验内容有疑问或建议, 请通过邮件的方式联系余子濠(zihaoyu.x#gmail.com)
 
-调试公理
-The machine is always right. (机器永远是对的)
-Corollary: If the program does not produce the desired output, it is the programmer's fault.
-Every line of untested code is always wrong. (未测试代码永远是错的)
-Corollary: Mistakes are likely to appear in the "must-be-correct" code.
+{% mdinhtml begin='<div class=panel><div class=lab>调试公理</div><div class=word-in-panel>', end='</div></div>' %}
+* The machine is always right. (机器永远是对的)
+ * Corollary: If the program does not produce the desired output, it is the programmer's fault.
+* Every line of untested code is always wrong. (未测试代码永远是错的)
+ * Corollary: Mistakes are likely to appear in the "must-be-correct" code.
+
+jyy曾经将它们作为fact提出.
+事实上无数程序员(包括你的学长学姐)在实践当中一次又一次验证了它们的正确性, 因此它们在这里作为公理出现.
+你可以不相信调试公理, 但你可能会在调试的时候遇到麻烦.
+{% endmdinhtml %}
 
 如何获得帮助
 在学习和实验的过程中, 你会遇到大量的问题. 除了参考课本内容之外, 你需要掌握如何获取其它参考资料.
