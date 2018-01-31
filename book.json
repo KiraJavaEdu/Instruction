@@ -1,0 +1,13 @@
+{
+  "gitbook": "3.x.x",
+  "plugins": [
+    "nestedmd",
+    "mdinhtml"
+  ],
+  "pluginsConfig": {},
+  "styles": {
+    "website": "styles.css",
+    "pdf": "styles.css"
+  }
+}
+
