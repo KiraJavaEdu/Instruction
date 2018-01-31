@@ -16,26 +16,43 @@ jyy曾经将它们作为fact提出.
 你可以不相信调试公理, 但你可能会在调试的时候遇到麻烦.
 {% endmdinhtml %}
 
-如何获得帮助
-在学习和实验的过程中, 你会遇到大量的问题. 除了参考课本内容之外, 你需要掌握如何获取其它参考资料.
-但在此之前, 你需要适应查阅英文资料. 和以往程序设计课上遇到的问题不同, 你会发现你不太容易搜索到相关的中文资料. 回顾计算机科学层次抽象图, 计算机系统基础处于程序设计的下层. 这意味着, 懂系统基础的人不如懂程序设计的人多, 相应地, 系统基础的中文资料也会比程序设计的中文资料少.
-如何适应查阅英文资料? 方法是尝试并坚持查阅英文资料.
-搜索引擎, 百科和问答网站
+
+## 如何获得帮助
+在学习和实验的过程中, 你会遇到大量的问题.
+除了参考课本内容之外, 你需要掌握如何获取其它参考资料.
+
+但在此之前, 你需要适应查阅英文资料.
+和以往程序设计课上遇到的问题不同, 你会发现你不太容易搜索到相关的中文资料.
+回顾计算机科学层次抽象图, 计算机系统基础处于程序设计的下层.
+这意味着, 懂系统基础的人不如懂程序设计的人多, 相应地, 系统基础的中文资料也会比程序设计的中文资料少.
+
+如何适应查阅英文资料? 方法是<font color="red">尝试并坚持查阅英文资料</font>.
+
+### 搜索引擎, 百科和问答网站
 为了查找英文资料, 你应该使用下表中推荐的网站:
-搜索引擎	百科	问答网站
-推荐使用	这里和这里有google搜索镜像	http://en.wikipedia.org	http://stackoverflow.com
-不推荐使用	http://www.baidu.com	http://baike.baidu.com	http://zhidao.baidu.com 
-http://bbs.csdn.net
+
+| | 搜索引擎 | 百科 | 问答网站|
+| --- | --- | --- | --- |
+| 推荐使用 | [这里](https://github.com/greatfire/wiki)和[这里](http://dir.scmor.com/google/)有google搜索镜像 | http://en.wikipedia.org | http://stackoverflow.com |
+| 不推荐使用 | ~~http://www.baidu.com~~ | ~~http://baike.baidu.com~~ | ~~http://zhidao.baidu.com~~ <br> ~~http://bbs.csdn.net~~ |
+
 一些说明:
-一般来说, 百度对英文关键词的处理能力比不上Google.
-通常来说, 英文维基百科比中文维基百科和百度百科包含更丰富的内容. 为了说明为什么要使用英文维基百科, 请你对比词条 前束范式 分别在百度百科, 中文维基百科和英文维基百科中的内容.
-stackoverflow是一个程序设计领域的问答网站, 里面除了技术性的问题(What is ":-!!" in C code?)之外, 也有一些学术性(Is there a regular expression to detect a valid regular expression?)和一些有趣的问题(What is the “-->” operator in C++?).
-官方手册
-官方手册包含了查找对象的所有信息, 关于查找对象的一切问题都可以在官方手册中找到答案. 通常官方手册的内容十分详细, 在短时间内通读一遍基本上不太可能, 因此你需要懂得"如何使用目录来定位你所关心的问题". 如果你希望寻找一些用于快速入门的例子, 你应该使用搜索引擎.
+* 一般来说, 百度对英文关键词的处理能力比不上Google.
+* 通常来说, 英文维基百科比中文维基百科和百度百科包含更丰富的内容.
+为了说明为什么要使用英文维基百科, 请你对比词条 `前束范式` 分别在[百度百科](http://baike.baidu.com/view/143343.htm), [中文维基百科](http://zh.wikipedia.org/wiki/%E5%89%8D%E6%9D%9F%E8%8C%83%E5%BC%8F)和[英文维基百科](http://en.wikipedia.org/wiki/Prenex_normal_form)中的内容.
+* stackoverflow是一个程序设计领域的问答网站, 里面除了技术性的问题([What is ":-!!" in C code?](http://stackoverflow.com/questions/9229601/what-is-in-c-code/9229793))之外, 也有一些学术性([Is there a regular expression to detect a valid regular expression?](http://stackoverflow.com/questions/172303/is-there-a-regular-expression-to-detect-a-valid-regular-expression))和一些有趣的问题([What is the “-->” operator in C++?](https://stackoverflow.com/questions/1642028/what-is-the-operator-in-c)).
+
+### 官方手册
+官方手册包含了查找对象的<font color="red">所有</font>信息,
+关于查找对象的<font color="red">一切</font>问题都可以在官方手册中找到答案.
+通常官方手册的内容十分详细, 在短时间内通读一遍基本上不太可能, 因此你需要懂得"如何使用目录来定位你所关心的问题".
+如果你希望寻找一些用于快速入门的例子, 你应该使用搜索引擎.
+
 这里列出一些本课程中可能会用到的手册:
-Intel 80386 Programmer's Reference Manual (人手一本的i386手册)
-GCC 6.3.0 Manual
-GDB User Manual
-GNU Make Manual
-System V ABI for i386
-On-line Manual Pager (即man, 这里有一个入门教程)
+* [Intel 80386 Programmer's Reference Manual](http://microsym.com/editor/assets/386intel.pdf) (人手一本的i386手册)
+* [GCC 6.3.0 Manual](http://gcc.gnu.org/onlinedocs/gcc-6.3.0/gcc.pdf)
+* [GDB User Manual](https://sourceware.org/gdb/current/onlinedocs/gdb)
+* [GNU Make Manual](http://www.gnu.org/software/make/manual/make.pdf)
+* [System V ABI for i386](http://math-atlas.sourceforge.net/devel/assembly/abi386-4.pdf)
+* On-line Manual Pager (即man, [这里](man.md)有一个入门教程)
+
