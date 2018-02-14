@@ -2,8 +2,8 @@
 
 {% mdinhtml begin='<div class=panel><div class=lab>实验须知</div><div class=word-in-panel>', end='</div></div>' %}
 
-如果你在实验过程中遇到了困难, 并打算向我们寻求帮助, 请先阅读[提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md)这篇文章.
-如果你发现了实验讲义和材料的错误或者对实验内容有疑问或建议, 请通过邮件的方式联系海风(bfu_java_ta@126.com)
+* 如果你在实验过程中遇到了困难, 并打算向我们寻求帮助, 请先阅读[提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md)这篇文章.
+* 如果你发现了实验讲义和材料的错误或者对实验内容有疑问或建议, 请通过邮件的方式联系海风(bfu_java_ta@126.com)
 
 {% endmdinhtml %}
 
