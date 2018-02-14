@@ -1,9 +1,11 @@
 # 实验前阅读
 
+{% mdinhtml begin='<div class=panel><div class=lab>实验须知</div><div class=word-in-panel>', end='</div></div>' %}
 
+如果你在实验过程中遇到了困难, 并打算向我们寻求帮助, 请先阅读[提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md)这篇文章.
+如果你发现了实验讲义和材料的错误或者对实验内容有疑问或建议, 请通过邮件的方式联系海风(bfu_java_ta@126.com)
 
-如果你在实验过程中遇到了困难, 并打算向我们寻求帮助, 请先阅读提问的智慧这篇文章.
-如果你发现了实验讲义和材料的错误或者对实验内容有疑问或建议, 请通过邮件的方式联系余子濠(zihaoyu.x#gmail.com)
+{% endmdinhtml %}
 
 {% mdinhtml begin='<div class=panel><div class=lab>调试公理</div><div class=word-in-panel>', end='</div></div>' %}
 * The machine is always right. (机器永远是对的)
@@ -16,15 +18,28 @@ jyy曾经将它们作为fact提出.
 你可以不相信调试公理, 但你可能会在调试的时候遇到麻烦.
 {% endmdinhtml %}
 
+## 实验环境
+Java 版本: >= Java 8
+* 推荐的实验环境方案: 
+ * 文本编辑器: Sublime Text、Ultraedit、Vim(**推荐，上手难度高**）
+ * 命令行工具: JDK中自带的javac、java、javadoc、jar等
+ * 构建工具: maven
+ * 版本管理工具: git
+* IDE方案：
+ * IntelliJ IDEA(社区版)
+ * 版本管理工具：git
+
 
 ## 如何获得帮助
 在学习和实验的过程中, 你会遇到大量的问题.
 除了参考课本内容之外, 你需要掌握如何获取其它参考资料.
 
-但在此之前, 你需要适应查阅英文资料.
-和以往程序设计课上遇到的问题不同, 你会发现你不太容易搜索到相关的中文资料.
-回顾计算机科学层次抽象图, 计算机系统基础处于程序设计的下层.
-这意味着, 懂系统基础的人不如懂程序设计的人多, 相应地, 系统基础的中文资料也会比程序设计的中文资料少.
+但在此之前，你需要适应查阅英文资料。随着科学技术的发展, 在国际学术交流中使用英语已经成为常态: 顶尖的论文无一不使用英文来书写, 在国际上公认的计算机领域经典书籍也是使用英文编著. 顶尖的论文没有中文翻译版; 如果需要获取信息, 也应该主动去阅读英文材料, 而不是等翻译版出版. "我是中国人, 我只看中文"这类观点已经不符合时代发展的潮流, 要站在时代的最前沿, 阅读英文材料的能力是不可或缺的.
+
+阅读英文材料, 无非就是"不会的单词查字典, 不懂的句子反复读". 如今网上有各种词霸可解燃眉之急, 但英文阅读能力的提高贵在坚持. "刚开始觉得阅读英文效率低", 是所有中国人都无法避免的经历. 如果你发现身边的大神可以很轻松地阅读英文材料, 那是因为他们早就克服了这些困难. 引用陈道蓄老师的话: 坚持一年, 你就会发现有不同; 坚持两年, 你就会发现大有不同.
+
+撇开这些高大上的话题不说, 阅读英文材料和你有什么关系呢? 有! 作为一门程序设计课程，你的大部分疑问都可以通过查找中文资料得到解答，也因此从这个时候开始训练英文资料的阅读能力是最为方便的，容易互相印证。同时，今后的实验过程中，你将不得不大量查阅Java Api，当然是官方提供的英文版本。
+
 
 如何适应查阅英文资料? 方法是<font color="red">尝试并坚持查阅英文资料</font>.
 
@@ -49,10 +64,11 @@ jyy曾经将它们作为fact提出.
 如果你希望寻找一些用于快速入门的例子, 你应该使用搜索引擎.
 
 这里列出一些本课程中可能会用到的手册:
-* [Intel 80386 Programmer's Reference Manual](http://microsym.com/editor/assets/386intel.pdf) (人手一本的i386手册)
-* [GCC 6.3.0 Manual](http://gcc.gnu.org/onlinedocs/gcc-6.3.0/gcc.pdf)
-* [GDB User Manual](https://sourceware.org/gdb/current/onlinedocs/gdb)
-* [GNU Make Manual](http://www.gnu.org/software/make/manual/make.pdf)
-* [System V ABI for i386](http://math-atlas.sourceforge.net/devel/assembly/abi386-4.pdf)
-* On-line Manual Pager (即man, [这里](man.md)有一个入门教程)
+* [Java SE8 语言规范](https://docs.oracle.com/javase/specs/jls/se8/jls8.pdf)
+* [Java SE8 API](https://docs.oracle.com/javase/8/docs/api/)
+
+####在线教程
+以下列出部分工具的在线官方教程
+* [Git](https://git-scm.com/book/en/v2)
+* [Maven](https://maven.apache.org/guides/getting-started/index.html)
 
