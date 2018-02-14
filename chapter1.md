@@ -12,8 +12,65 @@
 偶然的跟踪失败不会影响你的成绩. 如果上文中的错误信息总是出现, 请尽快联系我们.
 {% endmdinhtml %}
 
-#
-请使用C++语言编写一个Student类，要求声明和实现分离，具体要求如下：
+#重构之旅，由此展开
+各位都是学生，我们就从学生开始这场重构之旅！为了对比CPP与Java面向对象的差异，首先请各位同学请使用C++语言编写一个Student类，要求声明和实现分离，具体需求如下：
 1. 至少包含以下字段：姓名、学号、成绩单（包括课程名称、学时、分数，可以使用数组或者链表实现，由于每个学生选修的课程数量不一致，成绩单的项数不固定）、学分积（要求根据成绩单中各课程的学时数来计算分数的加权平均）
 2. 方法：构造函数以及析构函数不能省略，可以根据要求自行添加所需要的方法，至少有一组函数重载。
 3. 具备良好的封装，不允许直接操作对象的属性，必须通过相应的方法对对象的属性进行添加、删除、修改、查询。
+
+为了更快进入正题，我们给出如下C++头文件`Student.h`，lab的第一步，请给出该头文件的具体实现。
+
+
+```
+#include<string>
+
+using std::string;
+
+class Student {
+private:
+	typedef struct _course_ {  
+		string _courseNumber;
+		string _courseName;	
+		int _courseHour;
+		double _score;  
+		struct _course_ *next;  
+	}course, *courseList;   
+private:
+	string name;
+	int    NO;
+	double averScore;
+	courseList report;
+
+private:
+	void calcAverScore();
+	
+public:
+	Student();
+	Student(string name, int NO, double averScoer);
+	~Student();
+	
+	void setName(string);
+	void setNO(int);
+	string getName();
+	int getNO();
+	double getAverScore();
+	
+	bool addCourse(string NO, string name, int hour, double score);
+	bool delCourse(string NO);
+	bool updateCourse(string NO, double score);
+	void printReport();
+	void printReport(string NO);
+};
+
+```
+
+
+
+
+
+
+
+
+
+
+
