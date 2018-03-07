@@ -9,14 +9,26 @@
 
 
 #chapter 2
-1. 本章介绍了Java的文档注释，需要同学们根据提供的链接对文档注释以及`javadoc`命令的使用进一步自学，要求对附件中提供的示例程序，独立运行`javadoc`命令得到完整的文档注释，压缩提交。（今后的实验，会要求提交文档注释的生成网页）
+1. 本章介绍了Java的文档注释，需要同学们根据提供的[链接](https://www.cnblogs.com/boring09/p/4274893.html)对文档注释以及`javadoc`命令的使用进一步自学，要求对附件中提供的示例程序`DocTest.java`，独立运行`javadoc`命令得到完整的文档注释，压缩提交。（今后的实验，会要求提交文档注释的生成网页）
 2. 各位同学在学习c语言的时候，肯定练习过冒泡排序、水仙花数、完数、回文串等小程序，为了进一步熟悉Java的语法基础，要求同学们将这些程序，使用Java语言进行改写并提交！
+```
 程序清单:
 	1. 冒泡排序
 	2. 水仙花数
 	3. 完数
-	4. 回文串
-	5. 异或加密
+	4. 判断回文串
+	5. 最长会文子串
+	6. 中位数（借助快速排序的思想）
+	7. 异或加密
+	8. 快速判断大整数的奇偶
+	9. 不借助于临时变量，实现两个变量的交换
+	10. 选择排序
+	11. 插入排序
+	12. 最大公约数
+	13. 输出国际象棋棋盘（hint：char 219）
+	14. 字符串逆序
+	15. 二维矩阵乘法
+```
 3.  本章的示例程序多次使用了System.out.println()方法，很方便地输出了程序的运行结果，问题来了！“+”这个运算符，我们在System.out.println中也见过很多次了，如何理解？（请同学们编写示例程序回答以下问题）
 	* “+”运算符左右两边都是字符串的时候，返回什么类型？左右的原字符串是否有变化？
 	* “+”运算符左边字符串，右边基本类型（例如整型），返回什么类型？猜测内部可能的操作！
@@ -27,9 +39,98 @@ int y = 200;
 System.out.println("x+y="+x+y);
 System.out.println(x+y+"=x+y");
 ```
+
 #chapter 3
+1. 对于如下程序中`Tom`类的两个实例，`cat1`和`cat2`在内存中成员变量的内存如何分配，请按照讲义的画法，画出内存分配图（电子版或者手绘版照片均可）。
+```
+class Tom {
+	final int MAX = 100;
+	static final int MIN = 20;
+}
+public class Test {
+	public static void main(String[] args) {
+		System.out.println(Tom.MIN);
+		Tom cat1 = new Tom();
+		Tom cat2 = new Tom();
+		int x = Tom.MIN + cat1.MAX + cat2.MAX;
+		System.out.println(x);
+	}
+}
+```
+2. 在如下的参数个数可变的方法的方法重载的代码示例中，请思考1~4条`test()`方法依次会调用哪个`test()`方法。
+```
+public class OverloadVarargsTest {
+	public void test(String msg) {
+		System.out.println("只有一个字符串参数的test方法 ");
+	}
+	// 因为前面已经有了一个test()方法，test()方法里有一个字符串参数。
+	// 此处的长度可变形参里不包含一个字符串参数的形式
+	public void test(String... books) {
+		System.out.println("****形参长度可变的test方法****");
+	}
+
+    public static void main(String[] args) {
+		OverloadVarargsTest olv = new OverloadVarargsTest();
+		olv.test();
+		olv.test("aa");
+		olv.test(new String[]{"aa"});
+		olv.test("aa" , "bb");
+	}
+}
+```
+3. 对于如下的原文件中添加了`package语句`之后，使用命令行运行出现了如图所示的Error，请思考原因，并且通过查阅资料，找出使用`jdk命令行工具`正确运行含有package语句的java程序的方法。
+```
+package jx1;
+public class Hello {
+	public static void main(String[] args) {
+		System.out.println("Hello World!");
+	}
+}
+```
+![error](./images/packError.png)
+4. 了解`Jar`命令，如何创建归档文件。用Java编写一个`MathOpt类`，其中使用Java提供的Math类，自己编写一些一些代码，封装一些数学函数功能，把此类放入`MathPackage`包中，和提供的测试类一起使用jar命令打包成一个可运行的Jar包。
+5. private访问控制符可以修饰一个类的构造器，请同学思考，这个特性是否有必要？
+	* 若无必要，请至少给出三点理由，若有必要，请写出示例代码，需要提交的你的结论！
+	* 参考：设计模式之单例模式
+6. `==运算符`在比较引用类型变量时，只有在两个引用都指向了同一个对象时才返回真值。那么，字符串的字面值比较该如何做呢？请同学们查找Java API给出答案，并给出示例程序。
+7. 本章节学习完成之后，我们终于迈上了重构之旅，lab1是本章最后的大魔王！各位同学请迎接挑战。
+
 #chapter 4
+1. 思考如下代码是否会发生编译错误，请简要阐述
+```
+public class PrivateFinalMethodTest {
+	private final void test();
+}
+class Sub extends PrivateFinalMethodTest {
+	public void test();
+}
+```
+2. 请根据第3章和第4章所学内容，对涉及到的关键字及其用法进行总结：
+	* 要求使用自己组织语言，不能照抄书本以及课件，如果需要可以配上代码说明。
+	* 请至少包含如下关键字：
+		* `final` `static` `abstract`（重点要求，需要总结可使用的类成员类型及其效果）
+		* `private` `protected` `public` `default`
+		* `class` `enum` `extends` `interface`
+3. 思考为什么外部类的访问权限只能是`public`或者`default`；而内部类的访问权限，可以使用所有的访问修饰符？
+4. 到目前为止，我们已经学习了Java语言对于面向对象所支持绝大部分特性，已经具备足够的能力去阅读JDK中的部分源代码！代码阅读任务——`BigInteger`类要求：
+	1. 通过阅读源码，理解对于“大整数”的存储原理
+	2. 理解加减乘除的基本操作以及`BigInteger`的各个构造器
+	3. 梳理源码中各种学习过的知识点，并列举出源码中不理解的点
+5. 使用`javac`命令编译课件中内部类以及枚举类的示例代码（若未提供源码，请自行编写），观察编译后生成的class文件，并自行总结编译得到class文件的命名规则。
+6. 学习完本章的内容之后，我们就可以基于lab1正式开始重构之旅了！lab2和lab3，接二连三的挑战！
+
 #chapter 5
+1. 我们提供了一份非常优秀的正则表达式教程，强烈建议各位同学将该教程完整学习一遍！
+	* 自学要求：
+		* 熟悉基本的正则表达式语法，要求掌握Pattern和Matcher两个类的使用方式。
+		* 包括量词、捕获组、边界判断等
+	* 小练习：
+		* 利用正则表达式，编写一个工具，检测用户输入的email是否正确。
+2. Java 8 对日期时间类，有了重大改进，要求自学如何自定义日期时间的输出格式。
+3. 比较是一件非常频繁的操作，与比较相关，Java为我们提供了两个接口，`Comparable`和`Comparator`接口，要求通过自学掌握这两个接口的用法。
+4. 本章涵盖内容非常之广！我们又可以利用所学，继续我们的重构之旅，lab4相信一定不会难倒各位同学。
+5. 经历了相当长一段时间的学习了！相信各位同学对于Java也有了一定程度的认识，PA1一个非常综合的实验，其中需要同学们自学Java 的`GUI编程`（当然我们提供了部分资料），从今天开始，你有为期两周的时间去完成PA1.
+
 #chapter 6
 #chapter 7
 #chapter 8
