@@ -6,6 +6,15 @@
 3. 要求同学课后探索`JShell`的更多功能，可以参考这篇[博文](https://www.cnblogs.com/IcanFixIt/p/7199108.html?utm_source=itdadao&utm_medium=referral)进行了解。
 4. 要求同学着手开始建立起自己的编程资料库，在学习过程中可以将所得随时以博客或者笔记的方式记录下来，推荐在`GitHub`或者“码云”上申请帐号，创建个人的项目，并且平时应该将一些可以重用的代码整理好，放入自己的代码仓库以便随时取用；笔记推荐使用蚂蚁笔记，支持`Markdown`与`latex`公式且自带博客。 
 5. **重点：要求学习版本管理工具`git`的使用，今后的实验都会要求提交完整的git版本库进行查重。**本[链接](http://blog.csdn.net/free_wind22/article/details/50967723)仅供参考，建议同学自行查找相关资料进行学习。
+	
+	**补充资料**：
+	* 各位同学可以使用[廖雪峰的git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/)进行学习，要求掌握git的基本操作（建立版本库，添加文件，提交，分支切换，合并等）
+	* 阮一峰的日志中，对于git的使用总结非常漂亮，推荐各位在今后的git使用过程中反复阅读:
+		* [远程操作详解](http://www.ruanyifeng.com/blog/2014/06/git_remote.html)，5星推荐
+		* [git工作流程](http://www.ruanyifeng.com/blog/2015/12/git-workflow.html)，对各位同学初学git，推荐使用git flow模式来管理你们的版本库
+		* [git使用规范](http://www.ruanyifeng.com/blog/2015/08/git-use-process.html)，简洁明了
+		* [分支管理策略](http://www.ruanyifeng.com/blog/2012/07/git.html)，5星推荐
+	* 参考书《pro git》，在ftp上。
 
 
 #chapter 2
