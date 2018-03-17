@@ -35,7 +35,7 @@
 	10. 选择排序  SelectionSort.java
 	11. 插入排序  InsertionSort.java
 	12. 最大公约数  GCD.java
-	13. 输出国际象棋棋盘 Chess.java（hint：char 219）
+	13. 输出国际象棋棋盘 Chess.java（hint：char 0x25A0）
 	14. 字符串逆序 ReverseString.java
 	15. 二维矩阵乘法 MatrixMultiplication.java
 ```
