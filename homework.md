@@ -9,6 +9,22 @@
 	
 	**补充资料**：
 	* 各位同学可以使用[廖雪峰的git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/)进行学习，要求掌握git的基本操作（建立版本库，添加文件，提交，分支切换，合并等）
+		* 必须掌握
+		* git init 
+		* git status
+		* git add
+		* git commit
+		* git log
+		* git diff
+		* 分支操作
+		* git branch
+		* git merge
+		* git checkout
+		* 远程操作
+		* git remote
+		* git push
+		* git pull
+		* git clone	
 	* 阮一峰的日志中，对于git的使用总结非常漂亮，推荐各位在今后的git使用过程中反复阅读:
 		* [远程操作详解](http://www.ruanyifeng.com/blog/2014/06/git_remote.html)，5星推荐
 		* [git工作流程](http://www.ruanyifeng.com/blog/2015/12/git-workflow.html)，对各位同学初学git，推荐使用git flow模式来管理你们的版本库
