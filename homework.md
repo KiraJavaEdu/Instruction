@@ -75,6 +75,35 @@ System.out.println(x+y+"=x+y");
 6. 作业3的文字说明，请提交pdf版本，保证审阅的时候不会发生格式错乱，生成pdf文件的方法（word生成，markdown生成，蚂蚁笔记的markdown支持导出pdf）。
 
 #chapter 3
+1. 对于讲义中的FinalReferenceTest示例，实际上是对“迁户口”这一场景的模拟，每个人的身份证号码应该是不变的，但是身份证上的签发派出所是可以改变的。
+为了加强各位同学对于`final`修饰引用类型变量的理解，请各位同学安装讲义的画法，画出内存分配图（电子版或者手绘版照片均可）。
+```
+class IdCard{
+    final String cardNO;
+    String policeStation;
+    IdCard(String cardNO, String policeStation){
+        this.cardNO = cardNO;
+        this.policeStation = policeStation;
+    }
+}
+class Person{
+    final IdCard idCard;
+    Person(IdCard idCard){
+        this.idCard = idCard;
+    }
+}
+public class FinalReferenceTest{
+    public static void main(String[] args){
+        IdCard idCard = new IdCard("320924********2145", "****派出所");
+        Person stu = new Person(idCard);
+        System.out.println(stu.idCard);
+        System.out.println(stu.idCard.policeStation);
+        stu.idCard.policeStation = "北京市海淀区东升派出所";
+        System.out.println(stu.idCard);
+        System.out.println(stu.idCard.policeStation);
+    }
+}
+```
 1. 对于如下程序中`Tom`类的两个实例，`cat1`和`cat2`在内存中成员变量的内存如何分配，请按照讲义的画法，画出内存分配图（电子版或者手绘版照片均可）。
 ```
 class Tom {
@@ -91,6 +120,16 @@ public class Test {
 	}
 }
 ```
+3. 对于如下的原文件中添加了`package语句`之后，使用命令行运行出现了如图所示的Error，请思考原因，并且通过查阅资料，找出使用`jdk命令行工具`正确运行含有package语句的java程序的方法。
+```
+package jx1;
+public class Hello {
+	public static void main(String[] args) {
+		System.out.println("Hello World!");
+	}
+}
+```
+![error](./images/packError.png)
 2. 在如下的参数个数可变的方法的方法重载的代码示例中，请思考1~4条`test()`方法依次会调用哪个`test()`方法。
 ```
 public class OverloadVarargsTest {
@@ -112,16 +151,6 @@ public class OverloadVarargsTest {
 	}
 }
 ```
-3. 对于如下的原文件中添加了`package语句`之后，使用命令行运行出现了如图所示的Error，请思考原因，并且通过查阅资料，找出使用`jdk命令行工具`正确运行含有package语句的java程序的方法。
-```
-package jx1;
-public class Hello {
-	public static void main(String[] args) {
-		System.out.println("Hello World!");
-	}
-}
-```
-![error](./images/packError.png)
 4. 了解`Jar`命令，如何创建归档文件。用Java编写一个`MathOpt类`，其中使用Java提供的Math类，自己编写一些一些代码，封装一些数学函数功能，把此类放入`MathPackage`包中，和提供的测试类一起使用jar命令打包成一个可运行的Jar包。
 5. private访问控制符可以修饰一个类的构造器，请同学思考，这个特性是否有必要？
 	* 若无必要，请至少给出三点理由，若有必要，请写出示例代码，需要提交的你的结论！
