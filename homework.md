@@ -156,8 +156,8 @@ public class OverloadVarargsTest {
 ```
 	1. sin, cos, tan
 	2. sqrt, pow
-	4. log (以e为底), log10 (以10位底)
-	5. exp
+	3. log (以e为底), log10 (以10位底)
+	4. exp
 ```
 测试类：
 ```
