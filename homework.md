@@ -76,7 +76,7 @@ System.out.println(x+y+"=x+y");
 
 #chapter 3
 1. 对于讲义中的FinalReferenceTest示例，实际上是对“迁户口”这一场景的模拟，每个人的身份证号码应该是不变的，但是身份证上的签发派出所是可以改变的。
-为了加强各位同学对于`final`修饰引用类型变量的理解，请各位同学安装讲义的画法，画出内存分配图（电子版或者手绘版照片均可）。
+为了加强各位同学对于`final`修饰引用类型变量的理解，请各位同学安装讲义的画法，画出内存分配图（电子版或者手绘版照片均可）。**注意需要使用不同的颜色标注出图中“不变”的部分**
 ```
 class IdCard{
     final String cardNO;
@@ -151,12 +151,69 @@ public class OverloadVarargsTest {
 	}
 }
 ```
-4. 了解`Jar`命令，如何创建归档文件。用Java编写一个`MathOpt类`，其中使用Java提供的Math类，自己编写一些一些代码，封装一些数学函数功能，把此类放入`MathPackage`包中，和提供的测试类一起使用jar命令打包成一个可运行的Jar包。
+实际上，你们在C语言当中，早早就接触过参数个数可变的函数，你们应该已经使用过它无数次。请写出这个函数，查找它的函数原型，并且去了解它是如何实现参数可变的，记录下你的学习笔记。
+4. 了解`Jar`命令，如何创建归档文件。用Java编写一个`MathOpt类`，其中查阅[Java API](https://docs.oracle.com/javase/8/docs/api/)中的Math类，自己编写一些代码，封装一些数学函数功能，把此类放入`MathPackage`包中，和提供的测试类一起使用jar命令打包成一个可运行的Jar包。请至少包含如下的数学函数功能。
+```
+	1. sin, cos, tan
+	2. sqrt, pow
+	4. log (以e为底), log10 (以10位底)
+	5. exp
+```
+测试类：
+```
+package MathPackage;
+import java.util.Scanner;
+public class Test {
+    public static void main(String[] args) {
+        MathOpt opt = new MathOpt();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("please input a degree:");
+        double x = sc.nextDouble();
+        if (opt.pow(opt.sin(x), 2) + opt.pow(opt.cos(x), 2) == 1.0) {
+            System.out.println("sin(x)^2 + cos(x)^2 == 1");
+        }
+        if (opt.sin(x) / opt.cos(x) == opt.tan(x)) {
+            System.out.println("sin(x) / cos(x) == tan(x)");
+        } else {
+            System.out.println("please explain the situation here.");
+            // TODO: why?
+        }
+        if (opt.log10(100) == opt.log(100) / opt.log(10)) {
+            System.out.println("log_a(b) / log_a(c) == log_c(b)");
+        }
+        if (opt.pow(opt.sqrt(100), opt.log10(100)) == 100.0 ) {
+            System.out.println("Mutually inverse operation");
+        }
+        System.out.println("e=" + opt.exp(1) );
+    }
+}
+```
+6. `==运算符`在比较引用类型变量时，只有在两个引用都指向了同一个对象时才返回真值。那么，字符串的字面值比较该如何做呢？请同学们查找Java API给出答案，并给出示例程序（要求包括使用`==`比较字符串变量，以及Java API所提供的方法比较String的字面值）。
 5. private访问控制符可以修饰一个类的构造器，请同学思考，这个特性是否有必要？
 	* 若无必要，请至少给出三点理由，若有必要，请写出示例代码，需要提交的你的结论！
 	* 参考：设计模式之单例模式
-6. `==运算符`在比较引用类型变量时，只有在两个引用都指向了同一个对象时才返回真值。那么，字符串的字面值比较该如何做呢？请同学们查找Java API给出答案，并给出示例程序。
 7. 本章节学习完成之后，我们终于迈上了重构之旅，lab1是本章最后的大魔王！各位同学请迎接挑战。
+
+##提交要求：
+1. 注意：**第1-7题为本章作业**，第8题为课程的实验1，**下述要求均针对本章作业**，而实验1的提交要求会在实验讲义中详细说明。
+2. 提交一个压缩文件，文件名为“学号\_姓名”，例如“130824206\_李想”，要求压缩文件格式（rar，zip，tar.gz）,其他的压缩文件格式，脚本无法识别即0分，请确保压缩文件无损坏，若文件损坏视为0分;文件名中严格使用**下划线_**，其余的分隔符自动脚本无法识别，可能会判断为没有提交。
+2. Deadline：2018.3.29日午夜12点前，后台会运行自动脚本接收邮件，超时未交本次作业即为0分。
+3. 提交方式：发送邮件至 bfu\_java\_ta@126.com ，邮件的主题为 “chapter3\_homework\_学号”，将压缩文件作为附件，后台的自动脚本接收邮件，所以主题请严格按照要求书写。
+4. 另外，请同时提交一份压缩文件至ftp的课程目录的作业中作为备份。
+5. 作业第1-4题，请放在一个pdf文件中，标清题号。作业第5-7题要求提交示例程序，请分别放在一个`package`中，包名为“ch3\_hw5/6/7”。即压缩文件中的内容，包括1个pdf文件和3个目录分别对应3个包的源代码的文件。
+
+	```
+		130824206_李想
+		├── ch3_hw.pdf
+		├── ch3_hw5
+		│   └── ***.java
+		├── ch3_hw6
+		│   └── ***.java
+		└── ch3_hw7
+		    └── ***.java
+	```
+6. 生成pdf文件的方法, 包括：word生成，markdown生成，蚂蚁笔记的markdown支持导出pdf,**以及最难、最有学习价值的方法，使用latex**。
+
 
 #chapter 4
 1. 思考如下代码是否会发生编译错误，请简要阐述
