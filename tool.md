@@ -43,7 +43,7 @@ cmder具备如下特点：
 解决方案是在使用`javac`时，指定源文件的具体编码`javac -encoding utf8`。于是乎，问题来了，每一次编译`utf8`编码的Java源文件，都需要输入`javac -encoding utf8 ***.java`的完整命令，稍显冗长。
 
 此时，`alias`命令就可以大显身手，我们演示利用`Cmder`自带的`alias`功能，为`javac -encoding utf8`取一个别名`javacu`。（**注意：Cmder的alias功能与传统的linux下的bash的alias命令有所差异。**）
-1. 打开Cmder，进入Cmder目录下的config子目录，编辑`user-aliases.cmd`文件（截图展示了使用`vim`编辑文件，由于`vim`具备一定的学习成本，各位同学可以使用习惯的编辑器编辑。）
+1. 运行Cmder，此时Cmder目录下的config子目录下会生成如下图所示的各式配置文件，编辑`user-aliases.cmd`文件（截图展示了使用`vim`编辑文件，由于`vim`具备一定的学习成本，各位同学可以使用习惯的编辑器编辑。）
 ![exp](images/tool_1.png)
 2. 在文件尾添加`javacu=javac -encoding utf8 $*`，保存退出
 ![exp](images/tool_2.png)
