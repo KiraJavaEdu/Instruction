@@ -1,3 +1,6 @@
+# 部分内容出处说明
+本讲义中，关于CS的部分背景知识，截取自南京大学yzh师兄，计算机系统基础课程的[实验讲义](https://nju-ics.gitbooks.io/ics2017-programming-assignment/content/)。
+
 # 实验前阅读
 
 {% mdinhtml begin='<div class=panel><div class=lab>实验须知</div><div class=word-in-panel>', end='</div></div>' %}
