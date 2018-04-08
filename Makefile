@@ -4,4 +4,4 @@ pdf:
 	gitbook pdf .
 run:
 	gitbook build . #--log=debug --debug
-	open _book/tool.html
+	open _book/lab2.html
