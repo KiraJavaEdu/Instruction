@@ -183,7 +183,7 @@ public class Test {
 5. private访问控制符可以修饰一个类的构造器，请同学思考，这个特性是否有必要？
 	* 若无必要，请至少给出三点理由，若有必要，请写出示例代码，需要提交的你的结论！
 	* 参考：设计模式之单例模式
-7. 本章节学习完成之后，我们终于迈上了重构之旅，[lab1](https://classroom.github.com/a/lmMmsSgP)是本章最后的大魔王！各位同学请迎接挑战。
+7. 本章节学习完成之后，我们终于迈上了重构之旅，[lab1](https://github.com/KiraJavaEdu/lab1)是本章最后的大魔王！各位同学请迎接挑战。
 
 # chapter 4
 1. 思考如下的程序能否通过编译，如果不能，请写出原因。
@@ -227,8 +227,8 @@ class Sub extends PrivateFinalMethodTest {
     1. 通过阅读源码，理解对于“大整数”的存储原理
     2. 理解加减乘除的基本操作以及`BigInteger`的各个构造器
     3. 梳理源码中各种学习过的知识点，并列举出源码中不理解的点
-6. 使用`javac`命令编译课件中内部类以及枚举类的示例代码（示例代码在[github](https://github.com/BfuJava/bfu-java-example-2018)，若未提供源码，请自行编写），观察编译后生成的class文件，并自行**总结编译得到class文件的命名规则**。
-7. 学习完本章的内容之后，我们就可以基于lab1正式开始重构之旅了！[lab2](https://classroom.github.com/a/b4UA9g_u)和lab3，接二连三的挑战！
+6. 使用`javac`命令编译课件中内部类以及枚举类的示例代码（示例代码在[github](https://github.com/KiraJavaEdu/JavaExample)，若未提供源码，请自行编写），观察编译后生成的class文件，并自行**总结编译得到class文件的命名规则**。
+7. 学习完本章的内容之后，我们就可以基于lab1正式开始重构之旅了！[lab2](https://github.com/KiraJavaEdu/lab2)和lab3，接二连三的挑战！
 
 # chapter 5
 1. 我们提供了一份非常优秀的正则表达式教程，强烈建议各位同学将该教程完整学习一遍！
