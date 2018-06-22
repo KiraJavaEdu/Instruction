@@ -1,49 +1,73 @@
 # 海风的Java讲义与实验 （草稿）
+## 课程讲义
+
+本讲义是海风业余爱好维护的，想提供一个能够跟得上Java版本更新的课程，包含课程slide，作业，实验和大作业，目前还处于第一版的草稿阶段，尚有许多不足，欢迎各位提出建议。海风的邮箱(sun95214@gmail.com)
+
+海风的Java课程讲义放在了[google dirve](https://drive.google.com/drive/folders/18eXlMBcnuMLlCEOGTCXqMP3wGGay6ouL?usp=sharing)中，各位可以学习或者适用于其他目的，但请注明出处。
+
+目前课程讲义包含以下内容：
+
+1. Java语言概述
+
+2. Java语言基础
+
+3. OOP 上
+
+4. OOP 下
+
+5. Java基础类库
+
+6. 异常处理
+
+7. IO
+
+8. 多线程（讲义制作ing）
+
+   
+
 ## 部分内容出处说明
-本讲义中，关于CS的部分背景知识，截取自南京大学yzh师兄，计算机系统基础课程的[实验讲义](https://nju-ics.gitbooks.io/ics2017-programming-assignment/content/)。
+
+实验讲义中，关于CS的部分背景知识，截取自南京大学yzh师兄，计算机系统基础课程的[实验讲义](https://nju-ics.gitbooks.io/ics2017-programming-assignment/content/)。
+
+课程讲义参考了[《疯狂Java讲义（第3版）》](https://item.jd.com/12261787.html)和北京理工大学 金旭亮老师的[Java讲义](http://www.jinxuliang.com/mainwebsite)。
 
 ## 实验前阅读
 
-{% mdinhtml begin='<div class=panel><div class=lab>实验须知</div><div class=word-in-panel>', end='</div></div>' %}
+### 实验须知
 
 * 如果你在实验过程中遇到了困难, 并打算向我们寻求帮助, 请先阅读[提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md)这篇文章.
-* 如果你发现了实验讲义和材料的错误或者对实验内容有疑问或建议, 请通过邮件的方式联系海风(bfu_java_ta@126.com)
+* 如果你发现了实验讲义和材料的错误或者对实验内容有疑问或建议, 请通过邮件的方式联系海风(sun95214@gmail.com)
 
-{% endmdinhtml %}
+### 调试公理
 
-{% mdinhtml begin='<div class=panel><div class=lab>调试公理</div><div class=word-in-panel>', end='</div></div>' %}
 * The machine is always right. (机器永远是对的)
- * Corollary: If the program does not produce the desired output, it is the programmer's fault.
+   * Corollary: If the program does not produce the desired output, it is the programmer's fault.
 * Every line of untested code is always wrong. (未测试代码永远是错的)
- * Corollary: Mistakes are likely to appear in the "must-be-correct" code.
+   * Corollary: Mistakes are likely to appear in the "must-be-correct" code.
 
 jyy曾经将它们作为fact提出.
 事实上无数程序员(包括你的学长学姐)在实践当中一次又一次验证了它们的正确性, 因此它们在这里作为公理出现.
 你可以不相信调试公理, 但你可能会在调试的时候遇到麻烦.
-{% endmdinhtml %}
+
 
 ## 实验环境
 Java 版本: >= Java 8
 * 推荐的实验环境方案: 
- * 文本编辑器: Sublime Text、Ultraedit、Vim(**推荐，上手难度高**）
- * 命令行工具: JDK中自带的javac、java、javadoc、jar等
- * 构建工具: maven
- * 版本管理工具: git
+
+   * 文本编辑器: Sublime Text、Ultraedit、Vim(**推荐，上手难度高**）
+   * 命令行工具: JDK中自带的javac、java、javadoc、jar等
+   * 构建工具: maven
+   * 版本管理工具: git
+
 * IDE方案：
- * IntelliJ IDEA(社区版)
- * 版本管理工具：git
 
+   * IntelliJ IDEA(社区版)
 
-{% mdinhtml begin='<div class=panel><div class=lab>开发跟踪</div><div class=word-in-panel>', end='</div></div>' %}
-* 我们使用git对你的实验过程进行跟踪, 不合理的跟踪记录会影响你的成绩. git log是独立完成实验的最有力证据, 完成了实验内容却缺少合理的git log, 不仅会损失大量分数, 还会给抄袭判定提供最有力的证据. 因此, 请你注意以下事项:
- * 请你不定期查看自己的git log, 检查是否与自己的开发过程相符.
- * **不要把你的代码上传到公开的地方.**
- * 总是在工程目录下进行开发, 不要在其它地方进行开发, 然后一次性将代码复制到工程目录下, 这样git将不能正确记录你的开发过程.
- * 不要删除我们要求创建的分支, 否则会影响我们的脚本运行, 从而影响你的成绩
- * 不要清除git log
+   * 构建工具: maven
 
-偶然的跟踪失败不会影响你的成绩. 如果上文中的错误信息总是出现, 请尽快联系我们.
-{% endmdinhtml %}
+   * 版本管理工具：git
+
+     
 
 ## 如何获得帮助
 在学习和实验的过程中, 你会遇到大量的问题.
